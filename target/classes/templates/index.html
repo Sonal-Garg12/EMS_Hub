@@ -1,0 +1,854 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.com">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- FAVICON--->
+  <link rel="icon" type="image/png" href="images/registration/favicon.jpg">
+
+   <!-- Animation CDN -->
+
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Bootstrap 5 CDN Links -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+   
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
+    <title>Home Page</title>
+    <style>
+     *{  
+
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	
+}
+
+a{
+	text-decoration: none;
+}
+
+::-webkit-scrollbar{
+	width: 6px;
+
+}
+
+::-webkit-scrollbar-track{
+	background-color: darkblue;
+
+}
+
+::-webkit-scrollbar-thumb{
+	background-color: red;
+}
+
+section{
+	
+}
+
+.main-btn{
+	display: inline-block;
+	border-radius: 50px;
+	padding:10px 27px;
+	border:1px solid pink;
+	font-weight: 600;
+	font-size:14px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	background:linear-gradient(to right, red 50%,transparent 50%);
+	background-size: 200% 100%;
+	background-position: right bottom;
+	transition: all 0.5s ease-out;
+
+
+
+}
+
+.main-btn:hover{
+	color:white;
+	background-position: left bottom;
+}
+
+.header_wrapper .nav-item{
+	margin:0 10px;
+}
+
+.header_wrapper .nav-item .nav-link{
+	font-size: 18px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	color:white;
+	display: inline-block;
+}
+.header_wrapper .nav-item .nav-link.active,
+.header_wrapper .nav-item .nav-link:hover{
+	color:red;
+}
+
+.header-scrolled{
+	position: fixed;
+	top:0;
+	left:0;
+	width:100%;
+	background-color: #0c1378;
+	
+	 box-shadow: 0px 15px 10px -15px #111;    
+}
+
+.banner_wrapper .carousel-inner img{
+	height:750px;
+	width: 100%;
+	 background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+}
+
+/* Start Counter Section */
+
+
+.award-section{
+	background-color: #0c1378;
+	padding:1px 0;
+
+}
+
+.award-section p{
+
+	color:white;
+	text-transform: uppercase;
+}
+
+.award-section h2{
+
+	color:white;
+	font-size: 55px;
+	margin-top: 30px;
+
+
+}
+
+/* footer */
+ .footer{
+      background-color: #0c1378;
+    }
+
+/*End Counter Section */
+
+/* Start Testimonial*/
+
+.testimonial_section body {
+    font-family: 'Noto Sans', sans-serif;
+    padding: 40px 0;
+}
+.testimonial_section h2 {
+  color: #333;
+  text-align: center;
+  text-transform: uppercase;
+    font-family: 'Noto Sans', sans-serif;
+  font-weight: bold;
+  position: relative;
+  margin: 30px 0 60px;
+}
+.testimonial_section h2::after {
+  content: "";
+  width: 140px;
+  position: absolute;
+  margin: 0 auto;
+  height: 3px;
+  background: #db584e;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+    opacity: .8;
+}
+.testimonial_section .col-center {
+  margin: 0 auto;
+  float: none !important;
+}
+.testimonial_section .carousel {
+  margin: 50px auto;
+  padding: 0 70px;
+}
+.testimonial_section .carousel-item {
+  color: #999;
+  font-size: 14px;
+    text-align: center;
+  overflow: hidden;
+    min-height: 290px;
+}
+.testimonial_section .carousel .item .img-box {
+  width: 135px;
+  height: 135px;
+  margin: 0 auto;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+}
+.testimonial_section .carousel .img-box img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 50%;
+}
+.testimonial_section .carousel .testimonial {
+  padding: 30px 0 10px;
+}
+.testimonial_section .carousel .overview { 
+  font-style: italic;
+}
+.testimonial_section .carousel .overview b {
+  text-transform: uppercase;
+  color: #db584e;
+}
+.testimonial_section .carousel .carousel-control {
+  width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    top: 50%;
+  background: none;
+}
+.testimonial_section .carousel-control i {
+    font-size: 68px;
+  line-height: 42px;
+    position: absolute;
+    display: inline-block;
+  color: rgba(0, 0, 0, 0.8);
+    text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
+}
+.testimonial_section .carousel .carousel-indicators {
+  bottom: -40px;
+}
+.testimonial_section .carousel-indicators li, .carousel-indicators li.active {
+  width: 10px;
+  height: 10px;
+  margin: 1px 3px;
+  border-radius: 50%;
+}
+.testimonial_section .carousel-indicators li { 
+  background: #999;
+  border-color: transparent;
+  box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
+}
+.testimonial_section .carousel-indicators li.active {  
+  background: #555;   
+  box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
+}
+
+/*
+.back-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .back-video {
+        width: auto;
+        height: 100%;
+    }
+}
+
+.back-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+*/
+
+
+    /* Banner Section */
+     
+     video{
+     	height: 100%;
+     	width: 100%;
+     }
+     
+     
+   .whatsaap_float{
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+   transition: width 3s, height 3s,
+    transform 2s;
+
+  }
+  .whatsaap_float:hover{
+   
+    transform: rotate(360deg);
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    
+  }
+
+
+
+
+     
+    </style>
+  </head>
+  <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="75">
+  
+  <!-- Navbar Start 
+  
+   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Emp System</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        
+        <li class="nav-item active">
+          <a class="nav-link" href="addemp">Add Emp</a>
+        </li>
+        
+             <li class="nav-item active">
+          <a class="nav-link" href="about">About</a>
+        </li>
+          <li class="nav-item active">
+          <a class="nav-link" href="allemp">All Employee</a>
+        </li>
+       
+      </ul>
+      
+    
+  </div>
+  </div>
+</nav>
+ -->
+  
+  
+  
+  
+   <!-- Navbar End -->
+   
+   
+   <!-- Navbar Section -->
+
+  <header class="header_wrapper">
+    <nav class="navbar navbar-expand-lg fixed-top border-bottom">
+  
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img style="border-radius:50%" src="images/logo3.png" height="150" width="100" class="img-fluid"/>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+     <!-- <span class="navbar-toggler-icon"></span> -->
+     <i class="fas fa-stream navbar-toggler-icon"></i>
+
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav menu-navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="about">About</a>
+        </li>
+       
+        <li class="nav-item">
+          <a class="nav-link" href="addemp">Add Employee</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="allemp">All Employee</a>
+        </li>
+
+
+
+      
+        <li class="nav-item mt-3 mt-lg-0">
+          <a class="nav-link" href="contactus">Contact Us</a>
+          
+        </li>
+        
+
+      </ul>
+    </div>
+    </div>
+
+</nav>
+  </header>
+  
+  
+   <div class="whatsaap_float">
+
+      <a href="//wa.me/+919554765187" target="_black"><img src="images/whatsapp.png" width="80px" class="whatsaap_float_btn"/></a>
+      
+    </div>
+  <!-- Navbar Section Exit-->
+  
+  <!-- Banner Section 
+  <section class="banner_wrapper ">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/banner4.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+       
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/banner5.webp" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+       
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/banner7.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+       
+      </div>
+    </div>
+
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+</section>
+      
+
+      -->
+ 
+  <!-- Banner Section Exit -->
+  <div class="container-fluid m-0 p-0">
+  
+  <div class="vid-parent">
+  		<video playsinline autoplay muted loop>
+  			<source src="images/videos.mp4">
+  		</video>
+  	</div>
+  
+        </div>
+        
+        
+        <!-- 
+        
+       <div class="container-fluid m-0 p-0">
+  	<div class="vid-parent">
+  		<video playsinline autoplay muted loop>
+  			<source src="videos/DELHI.mp4">
+  		</video>
+  	</div>
+
+  </div>
+         -->
+        
+        
+  
+   <!-- Notice Section  -->
+
+  <div class="container-fluid">
+    <div class="row bg-light">
+      <div class="col-lg-2 bg-warning ">
+
+        <h3 class="heading text-white">EMS HUB</h3>
+        
+      </div>
+      <div class="col-lg-10">
+
+     <marquee><p class=" text-success">
+     <b>"Welcome to Employee Management System -</b> Your Solution for Streamlined Workforce Management."
+     </p></marquee>
+       </div>
+      
+    </div>
+  </div>
+  
+  
+  <section class="about_section mt-5">
+     <h2 class="text-center text-warning" data-aos="fade-up"><b>ABOUT</b> <span class="text-primary"><b>COMPANY</b></span></h2> 
+  <hr/ class="w-25 m-auto">
+  <div class="container mt-5">
+  <div class="row">
+ 
+  </div> 
+    <div class="row mt-5">
+    <div class="col-lg-5 align-items-center justify-content-start" data-aos="fade-right">
+     <p class="fs-6 text-start"> 
+    We are passionate about creating innovative solutions that empower organizations to efficiently manage their most valuable asset –
+     their employees. Our Employee Management System is designed with
+     the belief that when employees are supported, engaged, and well-managed, businesses thrive
+     solutions that empower organizations to efficiently manage their most valuable asset –
+     their employees.
+   </p>
+   <br>
+<center>
+  <a href="#">
+   <input type="submit" class="main-btn" name="" value="Read More">
+   </a>
+ </center>
+   
+     </div> 
+      <div class="col-lg-7" data-aos="fade-left">
+        
+         <img src="images/aboutimg.jpg" height="350" width="100%" class="img">
+       </div> 
+
+    </div>
+  </div> 
+  </section>
+  
+  
+  <!-- Counter Section  -->
+<br><br><br><br><br>
+   <section class="counter_section">
+      <h2 class="text-center text-warning ">WORKING WITH  <span class="text-primary">OUR COMPANY</span></h2>
+      <p class="text-center fs-6">Our Company, Where Journey of Innovation Starts.</p> 
+<br><br>
+      <div class="container-fluid mt-5">
+        <div class="row text-center award-section">
+          <div class="col-md-3 col-md-0 mb-5">
+            <h2>18+</h2>
+            <p>YEAR OF EXPERIENCE</p>
+          </div>
+
+          <div class="col-md-3 col-md-0 mb-5">
+            <h2>2000+</h2>
+            <p>Employee</p>
+          </div>
+
+
+          <div class="col-md-3 col-md-0 mb-5">
+            <h2>30+</h2>
+            <p>TRIP</p>
+          </div>
+
+          <div class="col-md-3 col-md-0 mb-5">
+            <h2>30</h2>
+            <p>AWARDS WON</p>
+          </div>
+        </div>
+      </div>
+      
+  
+   </section>
+   <br><br><br><br><br>
+   
+   
+
+
+   <section class="facilities_section">
+   
+    <h2 class="text-center text-warning ">OUR <span class="text-primary">Facilities</span></h2>
+    <hr/ class="w-25 m-auto">
+    <br><br>
+
+    <div class="container mt-5"> 
+      <div class="row">
+      <div class="col-lg-4" data-aos="fade-right">
+      <img src="images/gymface.jpg" class="img-fluid"> 
+      <h3 class="text-primary text-center mt-1">Gym</h3>
+      </div> 
+       <div class="col-lg-4" data-aos="flip-up">
+          <img src="images/sportface.jpg" class="img-fluid"> 
+          <h3 class="text-primary text-center mt-2">Sports</h3>
+       </div> 
+        <div class="col-lg-4" data-aos="fade-left">
+           <img src="images/livingface.jpg" class="img-fluid"> 
+           <h3 class="text-primary text-center mt-2">Living Room</h3>
+        </div> 
+      </div>
+
+
+        <div class="row mt-5">
+      <div class="col-lg-4 " data-aos="fade-right">
+      <img src="images/transportface.jpg" class="img-fluid"> 
+      <h2 class="text-primary text-center mt-2">Transport Facilities</h2>
+      </div> 
+       <div class="col-lg-4" data-aos="flip-up">
+          <img src="images/workshopface.jpg" class="img-fluid"> 
+          <h3 class="text-primary text-center mt-2">Workshops</h3>
+       </div> 
+        <div class="col-lg-4" data-aos="fade-left">
+           <img src="images/newcampus.jpg" class="img-fluid"> 
+           <h3 class="text-primary text-center mt-2">WiFi Campus</h3>
+        </div> 
+      </div>
+
+
+    </div>
+
+   </section>
+   <br><br><br><br><br>
+   
+   <!-- Start Testimonial Sections -->
+   
+   <section class="testimonial_section">
+   <div class="container-fluid bg-light">
+   <div class="row">
+   
+    <div class="col-md-8 col-center m-auto">
+      <h2>Testimonials</h2>
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Carousel -->
+        <div class="carousel-inner">
+          <div class="item carousel-item active">
+            <div class="img-box"><img src="https://i.ibb.co/d5DY64w/img1.jpg" alt=""></div>
+            <p class="testimonial">
+            "I've been working at SSK Private Limited Technology for two years now. The work environment
+             is positive, and my colleagues are supportive. However, 
+            there's room for improvement in terms of career development opportunities."
+             
+              </p>
+            <p class="overview"><b>Jennifer Smith</b>, Office Worker</p>
+          </div>
+          <div class="item carousel-item">
+            <div class="img-box"><img src="https://i.ibb.co/5FF1vqz/img2.jpg" alt=""></div>
+            <p class="testimonial">"I'm proud to work for SSK Private Limited Technology . The company values its 
+            employees and invests in training and growth. I've had numerous
+             opportunities for advancement and love the positive company culture."</p>
+            <p class="overview"><b>Dauglas McNun</b>, Financial Advisor</p>
+          </div>
+          <div class="item carousel-item">
+            <div class="img-box"><img src="https://i.ibb.co/Trv7hDv/img3.jpg" alt=""></div>
+            <p class="testimonial">"I've been with SSK Private Limited Technology for a year, and I appreciate the
+             opportunities for professional growth. The company values diversity and inclusion, which is commendable. 
+            However, I feel that salary increments could be more competitive."</p>
+            <p class="overview"><b>Hellen Wright</b>, Athelete</p>
+          </div>
+        </div>
+        <!-- Carousel Controls -->
+        <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
+          <i class="fa fa-angle-left"></i>
+        </a>
+        <a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
+          <i class="fa fa-angle-right"></i>
+        </a>
+      </div>
+    </div>
+   
+   
+   
+   </div>
+   </div>
+   </section>
+   
+   
+   <!-- End  Testimonial Sections-->
+   
+   
+   <!-- Start footer section -->
+   
+     <section class=" footer text-white pt-5 pb-4 mt-5">
+
+    <div class="container text-center text-md-left">
+    <div class="row text-center justify-content-start">
+      <div class="col-md-3 col-lg-3 mx-auto mt-3">  
+      <h5 class="text-uppercase mb-4 font-weight-bold text-warning text-start">EMPLOYEE MANAGEMENT</h5>
+      <p class="text-start">
+      Employee management refers to the process of overseeing and coordinating an organization's
+       workforce to ensure that employees are productive,
+       satisfied, and aligned with the company's goals and values. 
+      </p>
+      </div>
+          
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 text-start">
+            <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Product</h5>
+            <p>
+            <a href="#" class="text-white" style="text-decoration: none;">Home</a>  
+            </p>
+            <p>
+            <a href="#" class="text-white" style="text-decoration: none;">About</a> 
+            </p>
+            <p>
+            <a href="#" class="text-white" style="text-decoration: none;">Add Employee</a> 
+            </p>
+            <p>
+            <a href="#" class="text-white" style="text-decoration: none;">All Employee</a> 
+            </p>
+            <p>
+            <a href="#" class="text-white" style="text-decoration: none;">Contact Us</a>  
+            </p>
+          </div>
+
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3 text-start">
+            <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Learn Here</h5>
+
+              <p>
+            <a href="#" class="text-white" style="text-decoration: none;">Our Company</a>  
+            </p>
+            <p>
+            <a href="#" class="text-white" style="text-decoration: none;"> Our Achievement</a> 
+            </p>
+            <p>
+            <a href="#" class="text-white" style="text-decoration: none;">System of Evaluation</a>  
+            </p>
+            <p>
+            <a href="#" class="text-white" style="text-decoration: none;">Employee Review</a> 
+            </p>
+            <p>
+            <a href="#" class="text-white" style="text-decoration: none;"> Client Feedback</a> 
+            </p>
+
+          </div>
+
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 text-start">
+            <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Get in Touch</h5>
+
+            <p>
+            <i class="fas fa-home mr-3"> 
+            ABC Manufacturing, Inc.
+            123 Main Street, Suite 456
+             Metropolis, CA 98765
+             United States
+            </i> 
+            </p>
+
+              <p>
+            <i class="fas fa-envelope mr-3">info@ssk.com</i>  
+            </p>
+
+              <p>
+            <i class="fas fa-phone mr-3">+91-123456789</i>  
+            </p>
+
+              <p>
+            <i class="fas fa-print mr-3">+0133563377</i> 
+            </p>
+
+          </div>
+
+
+      </div>
+
+      <hr class="mb-4"> 
+
+      <div class="row align-items-center">
+      <div class="col-md-7 col-lg-8">
+      <p>Copyright 2024 <small>&copy;</small> All rights reversed by:
+        <a href="#" style="text-decoration: none;">
+          <strong class="text-warning">S S K Softech</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        </a>
+       
+      </p>  
+      </div>
+
+      <div class="col-md-5 col-lg-4">
+
+        <div class="text-center text-md-right">
+          <ul class="list-unstyled list-inline">
+          <li class="list-inline-item">
+            <a href="#" class="btn-floating btn-sm text-white" style="font-size: 24px;">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </li> 
+
+          <li class="list-inline-item">
+            <a href="#" class="btn-floating btn-sm text-white" style="font-size: 24px;">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li> 
+
+          <li class="list-inline-item">
+            <a href="#" class="btn-floating btn-sm text-white" style="font-size: 24px;">
+              <i class="fab fa-google-plus"></i>
+            </a>
+          </li> 
+
+          <li class="list-inline-item">
+            <a href="#" class="btn-floating btn-sm text-white" style="font-size: 24px;">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </li> 
+
+          <li class="list-inline-item">
+            <a href="#" class="btn-floating btn-sm text-white" style="font-size: 24px;">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li> 
+          </ul>
+          </div>
+        </div>  
+      </div>
+
+
+    </div>
+  
+
+  </section>
+   
+  
+  
+  
+  
+  
+  <script>
+  // Header Scroll
+
+let nav = document.querySelector(".navbar");
+
+window.onscroll = function()
+
+{
+
+  if(document.documentElement.scrollTop > 20){
+    nav.classList.add("header-scrolled");
+  }
+
+  else{
+    nav.classList.remove("header-scrolled");
+  }
+
+}
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  
+  
+  
+   
+   
+    
+   
+   
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
